@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { MailOutline, PhoneInTalk } from "material-ui-icons";
 
 const Container = styled.div`
   height: 150px;
@@ -75,7 +74,7 @@ const Topbar = () => {
         <Logo>İrem Tarim</Logo>
         <Email>
           <Icon>
-            <MailOutline></MailOutline>
+            <i class="bi bi-envelope"></i>
           </Icon>
           <TitleContainer>
             <Title>Bir Satır Bırakın</Title>
@@ -84,7 +83,7 @@ const Topbar = () => {
         </Email>
         <Phone>
           <Icon>
-            <PhoneInTalk></PhoneInTalk>
+            <i class="bi bi-telephone"></i>
           </Icon>
           <TitleContainer>
             <Title>Bizi Arayın</Title>

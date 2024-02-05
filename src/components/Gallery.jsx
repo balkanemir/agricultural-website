@@ -1,4 +1,3 @@
-import { KeyboardArrowLeft, KeyboardArrowRight } from "material-ui-icons";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { ImageItems } from "../data/images";
@@ -293,7 +292,7 @@ const Gallery = ({ setImageIsClicked }) => {
           onClick={() => handleDirection("left")}
           isDisabled={isDisabled === "left"}
         >
-          {isDisabled !== "left" && <KeyboardArrowLeft />}
+          {isDisabled !== "left" && <i class="bi bi-chevron-left"></i>}
         </Arrow>
         <ImageContainerWrapper
           onMouseDown={handleMouseDown}
@@ -336,7 +335,7 @@ const Gallery = ({ setImageIsClicked }) => {
           onClick={() => handleDirection("right")}
           isDisabled={isDisabled === "right"}
         >
-          {isDisabled !== "right" && <KeyboardArrowRight></KeyboardArrowRight>}
+          {isDisabled !== "right" && <i class="bi bi-chevron-right"></i>}
         </Arrow>
       </GalleryContainer>
     </Container>

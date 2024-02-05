@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { KeyboardArrowLeft, KeyboardArrowRight } from "material-ui-icons";
 import Navbar from "../components/Navbar";
 import Topbar from "../components/Topbar";
 import styled from "styled-components";
 import Carousel from "../components/Carousel";
 import About from "../components/About";
 import Gallery from "../components/Gallery";
-import { Close } from "material-ui-icons";
 import { ImageItems } from "../data/images";
 
 const Container = styled.div`
@@ -119,14 +117,14 @@ const Home = () => {
     <Container>
       <ImageZoomInContainer imageIsClicked={imageIsClicked}>
         <ArrowLeft onClick={() => handleDirection("left")}>
-          <KeyboardArrowLeft />
+          <i class="bi bi-chevron-left"></i>
         </ArrowLeft>
         <Image src={imageIsClicked} />
         <ArrowRight onClick={() => handleDirection("right")}>
-          <KeyboardArrowRight />
+          <i class="bi bi-chevron-right"></i>
         </ArrowRight>
         <CloseButton onClick={handleCloseButton}>
-          <Close />
+          <i class="bi bi-x-lg"></i>
         </CloseButton>
       </ImageZoomInContainer>
       <Topbar />

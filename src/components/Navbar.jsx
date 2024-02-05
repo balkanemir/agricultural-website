@@ -1,4 +1,3 @@
-import { Search } from "material-ui-icons";
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -128,7 +127,7 @@ const Navbar = () => {
         <SearchContainer>
           <SearchInput></SearchInput>
           <Icon>
-            <Search />
+            <i class="bi bi-search"></i>
           </Icon>
         </SearchContainer>
       </RightContainer>

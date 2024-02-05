@@ -1,8 +1,3 @@
-import {
-  ArrowBack,
-  KeyboardArrowLeft,
-  KeyboardArrowRight,
-} from "material-ui-icons";
 import React, { useState, useEffect } from "react";
 import styled, { keyframes, css } from "styled-components";
 import { SlideItems } from "../data/slides.js";
@@ -247,7 +242,7 @@ const Carousel = () => {
           isHovered={isHovered === "left"}
           onClick={() => handleClick("left")}
         >
-          <KeyboardArrowLeft />
+          <i class="bi bi-chevron-left"></i>
         </Arrow>
       </ArrowContainer>
       <ArrowContainer direction="right" isHovered={isHovered === "right"}>
@@ -257,7 +252,7 @@ const Carousel = () => {
           isHovered={isHovered === "right"}
           onClick={() => handleClick("right")}
         >
-          <KeyboardArrowRight />
+          <i class="bi bi-chevron-right"></i>
         </Arrow>
       </ArrowContainer>
 
