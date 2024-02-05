@@ -22,6 +22,12 @@ const Logo = styled.div`
   font-family: "El Messiri", "Raleway";
   color: #660708;
   font-weight: 600;
+  @media (max-width: 1050px) {
+    font-size: 32px;
+  }
+  @media (max-width: 650px) {
+    font-size: 28px;
+  }
 `;
 
 const Email = styled.div`
@@ -46,6 +52,14 @@ const Icon = styled.div`
   justify-content: center;
   align-items: center;
   color: #a4161a;
+  @media (max-width: 1050px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: 650px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -60,11 +74,23 @@ const Title = styled.div`
   font-size: 14px;
   opacity: 0.5;
   font-weight: 500;
+  @media (max-width: 1050px) {
+    font-size: 12px;
+  }
+  @media (max-width: 650px) {
+    font-size: 10px;
+  }
 `;
 const SubTitle = styled.div`
   font-size: 14px;
   font-weight: bold;
   color: #a4161a;
+  @media (max-width: 1050px) {
+    font-size: 12px;
+  }
+  @media (max-width: 650px) {
+    font-size: 10px;
+  }
 `;
 
 const Topbar = () => {

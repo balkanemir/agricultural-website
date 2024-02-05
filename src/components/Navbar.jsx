@@ -11,6 +11,9 @@ const Container = styled.div`
   right: 0;
   top: 110px;
   display: flex;
+  @media (max-width: 650px) {
+    margin: 0 5% 0 5%;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -32,6 +35,12 @@ const Button = styled.a`
   cursor: pointer;
   position: relative;
   color: white;
+  @media (max-width: 1050px) {
+    font-size: 12px;
+  }
+  @media (max-width: 650px) {
+    font-size: 10px;
+  }
 `;
 
 const ButtonLine = styled.div`

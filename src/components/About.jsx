@@ -10,6 +10,10 @@ const Container = styled.div`
   top: -100px;
   box-shadow: 0 10px 20px 1px #d3d3d3;
   position: relative;
+  @media (max-width: 650px) {
+    width: 90%;
+    margin: 0 5% 0 5%;
+  }
 `;
 
 const ContainerTopBar = styled.div`
@@ -34,6 +38,12 @@ const TopTitle = styled.div`
   width: 70%;
   margin: 0 0 20px 10%;
   color: #e5383b;
+  @media (max-width: 1050px) {
+    font-size: 16px;
+  }
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
 `;
 
 const Title = styled.div`
@@ -43,6 +53,12 @@ const Title = styled.div`
   width: 70%;
   margin: 0 0 10px 10%;
   color: #a4161a;
+  @media (max-width: 1050px) {
+    font-size: 30px;
+  }
+  @media (max-width: 650px) {
+    font-size: 20px;
+  }
 `;
 
 const Content = styled.div`
@@ -56,10 +72,20 @@ const Content = styled.div`
 
 const Image = styled.img`
   width: 80%;
-  height: 550px;
+  height: 60%;
   position: absolute;
-  bottom: -100px;
+  bottom: -15%;
   margin: 0 0 0 10%;
+  @media (max-width: 1050px) {
+    font-size: 16px;
+    height: 45%;
+    bottom: -12.5%;
+  }
+  @media (max-width: 650px) {
+    font-size: 14px;
+    height: 30%;
+    bottom: -10%;
+  }
 `;
 
 const About = () => {

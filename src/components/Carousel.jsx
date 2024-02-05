@@ -63,6 +63,13 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   overflow: hidden;
+  position: relative;
+  @media (max-width: 1050px) {
+    height: 80vh;
+  }
+  @media (max-width: 650px) {
+    height: 50vh;
+  }
 `;
 
 const Slide = styled.div`
@@ -101,6 +108,12 @@ const Image = styled.img`
       : css`
           ${ScaleAnimation} 2s linear;
         `};
+  @media (max-width: 1050px) {
+    height: 80vh;
+  }
+  @media (max-width: 650px) {
+    height: 50vh;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -130,6 +143,12 @@ const TitleAnimationContainer = styled.div`
         `
       : "none"};
   animation-delay: 2s;
+  @media (max-width: 1050px) {
+    height: 40px;
+  }
+  @media (max-width: 650px) {
+    height: 30px;
+  }
 `;
 
 const Title = styled.div`
@@ -146,6 +165,12 @@ const Title = styled.div`
         `
       : "none"};
   animation-delay: 2s;
+  @media (max-width: 1050px) {
+    font-size: 25px;
+  }
+  @media (max-width: 650px) {
+    font-size: 18px;
+  }
 `;
 
 const DescriptionContainer = styled.div`
@@ -154,6 +179,14 @@ const DescriptionContainer = styled.div`
   text-align: center;
   top: 40%;
   z-index: 4;
+  @media (max-width: 1050px) {
+    width: 80%;
+    margin: 0 10% 0 10%;
+  }
+  @media (max-width: 650px) {
+    width: 70%;
+    margin: 0 15% 0 15%;
+  }
 `;
 
 const Description = styled.div`
@@ -169,23 +202,64 @@ const Description = styled.div`
         `
       : "none"};
   animation-delay: 4s;
+  @media (max-width: 1050px) {
+    font-size: 16px;
+  }
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
 `;
 
-const ArrowContainer = styled.div`
+const LeftArrowContainer = styled.div`
   width: 50px;
   height: 50px;
   border: ${(props) =>
     props.isHovered ? "1px solid transparent" : "1px solid white"};
   border-radius: 100%;
   position: absolute;
-  left: ${(props) => (props.direction === "left" ? "2%" : "93%")};
-  top: 55%;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   padding: ${(props) => (props.isHovered ? "0" : "5px")};
   margin: ${(props) => (props.isHovered ? "5px" : "0")};
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
+  @media (max-width: 1050px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: 650px) {
+    width: 30px;
+    height: 30px;
+  }
+`;
+
+const RightArrowContainer = styled.div`
+  width: 50px;
+  height: 50px;
+  border: ${(props) =>
+    props.isHovered ? "1px solid transparent" : "1px solid white"};
+  border-radius: 100%;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: ${(props) => (props.isHovered ? "0" : "5px")};
+  margin: ${(props) => (props.isHovered ? "5px" : "0")};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  @media (max-width: 1050px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: 650px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const Arrow = styled.button`
@@ -199,6 +273,14 @@ const Arrow = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  @media (max-width: 1050px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: 650px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const Carousel = () => {
@@ -235,7 +317,7 @@ const Carousel = () => {
 
   return (
     <Container>
-      <ArrowContainer direction="left" isHovered={isHovered === "left"}>
+      <LeftArrowContainer direction="left" isHovered={isHovered === "left"}>
         <Arrow
           onMouseEnter={() => handleHover("left")}
           onMouseLeave={() => handleHover("")}
@@ -244,8 +326,8 @@ const Carousel = () => {
         >
           <i class="bi bi-chevron-left"></i>
         </Arrow>
-      </ArrowContainer>
-      <ArrowContainer direction="right" isHovered={isHovered === "right"}>
+      </LeftArrowContainer>
+      <RightArrowContainer direction="right" isHovered={isHovered === "right"}>
         <Arrow
           onMouseEnter={() => handleHover("right")}
           onMouseLeave={() => handleHover("")}
@@ -254,7 +336,7 @@ const Carousel = () => {
         >
           <i class="bi bi-chevron-right"></i>
         </Arrow>
-      </ArrowContainer>
+      </RightArrowContainer>
 
       {SlideItems.map((item) => (
         <Slide isChanged={index === item.id}>
