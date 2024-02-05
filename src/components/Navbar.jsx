@@ -20,6 +20,9 @@ const ButtonContainer = styled.div`
   flex: 2;
   display: flex;
   margin-left: 20px;
+  @media (max-width: 650px) {
+    margin-left: 10px;
+  }
 `;
 
 const Button = styled.a`
@@ -37,9 +40,11 @@ const Button = styled.a`
   color: white;
   @media (max-width: 1050px) {
     font-size: 12px;
+    margin: 0 5px 0 5px;
   }
   @media (max-width: 650px) {
     font-size: 10px;
+    margin: 0 5px 0 5px;
   }
 `;
 
